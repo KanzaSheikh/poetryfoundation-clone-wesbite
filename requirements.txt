@@ -1,0 +1,12 @@
+asgiref==3.2.7
+beautifulsoup4==4.9.0
+bs4==0.0.1
+Django==3.0.5
+get==2019.4.13
+post==2019.4.13
+public==2019.4.13
+pytz==2019.3
+query-string==2019.4.13
+request==2019.4.13
+soupsieve==2.0
+sqlparse==0.3.1
