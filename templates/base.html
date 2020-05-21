@@ -3,7 +3,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>My Project</title>
+        <title>Kay's Poetry</title>
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
         <link rel="stylesheet" href="{% static 'css/style.css' %}">
@@ -11,47 +11,53 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     </head>
     <body>
-    <nav>
+
+ <nav class="#4a148c purple darken-4">
     <div class="container nav-wrapper">
-      <a href="#" class="brand-logo">My Project</a>
+      <a href="#" class="brand-logo">Kay's Poetry</a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="#">Sass</a></li>
-        <li><a href="#">Components</a></li>
-        <li><a href="#">JavaScript</a></li>
+        <li><a href="#">Home</a></li>
       </ul>
     </div>
   </nav>
+  <ul class="sidenav" id="mobile-demo">
+    <li><a href="base.html">Home</a></li>
+  </ul>
+   
         <div class="container">
             <h1 style="text-align: center;">Search for poetry or poems here!</h1>
+            <h5 style="text-align: center;">A poetryfundation.com clone website</h5>
             <div class="row">
                 <div class="col s4">
                     <div class="center">
-                        <i class="large material-icons" style="color: #EE6E73">flash_on</i>
-                        <p>Fast craiglist webscraper</p>
-                        <p class="light center">Scrape away right here with a beautiful GUI</p>
+                        <i class="large material-icons" style="color: #4a148c">format_quote</i>
+                        <p>Featured Content</p>
+                        <p class="light center">Read beautiful pieces from old and young writers</p>
                     </div>
                 </div>
                 
                 <div class="col s4">
                     <div class="center">
-                        <i class="large material-icons" style="color: orange">camera</i>
-                        <p>Filter your searches</p>
-                        <p class="light center">We built in funtionality to filter based on pricing</p>
+                        <i class="large material-icons" style="color: #EE6E00;">book</i>
+                        <p>Featured Poetry Books</p>
+                        <p class="light center">Search poetry from books all around the world</p>
                     </div>
                 </div>
+            
 
                 <div class="col s4">
                     <div class="center">
-                        <i class="large material-icons" style="color: blue">chrome_reader_mode</i>
-                        <p>Fast craiglist webscraper</p>
-                        <p class="light center">Scrape away right here with a beautiful GUI</p>
+                        <i class="large material-icons" style="color: #FFD600">create</i>
+                        <p>Get Creative</p>
+                        <p class="light center">Get inspiration to write your next poem</p>
                     </div>
                 </div>
             </div>
             <form action="{% url 'new_search' %}" method="POST">
                 {% csrf_token %}
                 <input type="text" name="search" placeholder="search">
-                <button class="btn waves-effect waves-light" style="background-color: #ee6e73;" type="submit" name="action">Submit
+                <button class="btn waves-effect waves-light" style="background-color:#4a148c;" type="submit" name="action">Submit
                     <i class="material-icons right">send</i>
                   </button>
             </form>
