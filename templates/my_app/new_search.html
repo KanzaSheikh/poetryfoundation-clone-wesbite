@@ -13,25 +13,44 @@
   <div class="row">
           
 {% for post in final_postings %}
-<div class="col s4">
-  <div class="card medium">
+
+<div class="col l4 m6 s12">
+  
+  <div class="card medium sticky-action">
+
     <div class="card-image">
-      <a href="{{ post.2 }}">
-        <img src="{{ post.5 }}" alt="">
-      </a>
+      <img class=" materialboxed" src="{{ post.5 }}" alt="">
+      
     </div>
+
     <div class="card-content">
-      <h6>{{ post.1 }}</h6>
+      <a href="{{ post.2 }}"><h6><b>{{ post.1 }}</b></h6></a>
       <p>{{ post.3 }}</p>
     </div>
+
+    <div class="card-reveal">
+      <span class="card-title">{{ post.1 }} <i class="material-icons right">close</i></span>
+      <p>{{ post.4 }}</p>
+    </div>
+
     <div class="card-action">
+      <a class="activator">See More</a>
       <a href="{{ post.2 }}">{{ post.0 }}</a>
     </div>
+
   </div>
 </div>
 {% endfor %}
                    
 </div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function(){
+    const gallery = document.querySelectorAll(".materialboxed");
+    M.Materialbox.init(gallery,{}); 
+  });
+</script>
+
 </body>
 
 </html>

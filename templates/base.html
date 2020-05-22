@@ -14,7 +14,7 @@
 
  <nav class="#4a148c purple darken-4">
     <div class="container nav-wrapper">
-      <a href="#" class="brand-logo">Kay's Poetry</a>
+      <a href="#" class="brand-logo"> Kay's Poetry</a>
       <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
         <li><a href="#">Home</a></li>
@@ -27,7 +27,7 @@
    
         <div class="container">
             <h1 style="text-align: center;">Search for poetry or poems here!</h1>
-            <h5 style="text-align: center;">A poetryfundation.com clone website</h5>
+            <h5 style="text-align: center;">A poetryfoundation.com clone website</h5>
             <div class="row">
                 <div class="col s4">
                     <div class="center">
@@ -57,7 +57,7 @@
             <form action="{% url 'new_search' %}" method="POST">
                 {% csrf_token %}
                 <input type="text" name="search" placeholder="search">
-                <button class="btn waves-effect waves-light" style="background-color:#4a148c;" type="submit" name="action">Submit
+                <button class="btn waves-effect waves-light" style="background-color:#4a148c;" type="submit" name="action">Search
                     <i class="material-icons right">send</i>
                   </button>
             </form>
@@ -65,7 +65,8 @@
             {% block content %}
             {% endblock content%}
         </div>
-      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     </body>
 </html>

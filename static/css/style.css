@@ -1,9 +1,21 @@
 .card {
-    height: 400px; /* Your height here */
-    overflow: hidden;
-}
+    text-align: center;
+  }
+  
+  @media (max-width: 990px) {
+    .resizeimg {
+      height: auto;
+    }
+  }
+  
+  @media (min-width: 1000px) {
+    .resizeimg {
+      width: auto;
+      height: 350px;
+    }
+  }
 
-.card-image {
-    height: 250px; /* Your height here */
-    overflow: hidden;
+.nav-wrapper .brand-logo img {
+    max-height: 64px!important;
+    padding: 15px 0!important;
 }
