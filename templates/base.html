@@ -3,13 +3,14 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Kay's Poetry icon</title>
+        <title>Kay's Poetry </title>
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
         <link rel="stylesheet" href="{% static 'css/style.css' %}">
         <link rel="icon" href="static\images\K.jpg" type="image/icon type">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        
     </head>
     <body>
         <nav class="#4a148c purple darken-4">
@@ -21,8 +22,9 @@
                 </ul>
             </div>
         </nav>
+
         <ul class="sidenav" id="mobile-demo">
-            <li><a href="base.html">Home</a></li>
+            <li><a href="..">Home</a></li>
         </ul>
         <div class="container">
             <h1 style="text-align: center;">Search for poetry or poems here!</h1>
@@ -86,5 +88,10 @@
         
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <script>
+            $(document).ready(function(){
+            $('.sidenav').sidenav();
+            });
+        </script>
     </body>
 </html>
