@@ -11,20 +11,18 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     </head>
     <body>
-
- <nav class="#4a148c purple darken-4">
-    <div class="container nav-wrapper">
-      <a href="#" class="brand-logo"> Kay's Poetry</a>
-      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="#">Home</a></li>
-      </ul>
-    </div>
-  </nav>
-  <ul class="sidenav" id="mobile-demo">
-    <li><a href="base.html">Home</a></li>
-  </ul>
-   
+        <nav class="#4a148c purple darken-4">
+            <div class="container nav-wrapper">
+                <a href="#" class="brand-logo"> Kay's Poetry</a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="..">Home</a></li>
+                </ul>
+            </div>
+        </nav>
+        <ul class="sidenav" id="mobile-demo">
+            <li><a href="base.html">Home</a></li>
+        </ul>
         <div class="container">
             <h1 style="text-align: center;">Search for poetry or poems here!</h1>
             <h5 style="text-align: center;">A poetryfoundation.com clone website</h5>
@@ -44,7 +42,6 @@
                         <p class="light center">Search poetry from books all around the world</p>
                     </div>
                 </div>
-            
 
                 <div class="col s4">
                     <div class="center">
@@ -57,14 +54,34 @@
             <form action="{% url 'new_search' %}" method="POST">
                 {% csrf_token %}
                 <input type="text" name="search" placeholder="search">
-                <button class="btn waves-effect waves-light" style="background-color:#4a148c;" type="submit" name="action">Search
-                    <i class="material-icons right">send</i>
-                  </button>
+                <button class="btn waves-effect waves-light" style="background-color:#4a148c;" type="submit" name="action">Search</button>
             </form>
             
             {% block content %}
             {% endblock content%}
         </div>
+        <footer class="page-footer #4a148c purple darken-4">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">Contact Us</h5>
+                <p class="grey-text text-lighten-4">Email us at: <a href="#">kayspoetry@xyz.com</a></p>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Follow Us</h5>
+                <ul>
+                  <li><a class="grey-text text-lighten-3" href="https://www.linkedin.com/in/kanza-sheikh-6951a6197?originalSubdomain=pk">LinkedIn</a></li>
+                  <li><a class="grey-text text-lighten-3" href="https://github.com/KanzaSheikh">Github</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+                © 2020 Copyright Kay's Poetry
+            </div>
+          </div>
+        </footer>
         
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>

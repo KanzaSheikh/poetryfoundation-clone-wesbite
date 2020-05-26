@@ -6,6 +6,7 @@ from . import models
 
 BASE_POETRYFOUNDATION_URL = "https://www.poetryfoundation.org/search?query={}"
 BASE_SEARCH_URL = "https://www.poetryfoundation.org{}"
+ABOUT_POETRYFOUNDATION_URL = "https://www.poetryfoundation.org/foundation/people"
 
 # Create your views here.
 
